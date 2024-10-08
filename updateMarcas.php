@@ -2,6 +2,9 @@
 include("db.php");
 session_start();
 
+
+
+
 if(isset($_GET['id_marca'])){
     $id = $_GET['id_marca'];
     $query = "SELECT * FROM marcas WHERE id_marca=$id";
@@ -11,6 +14,7 @@ if(isset($_GET['id_marca'])){
     {
         $row = mysqli_fetch_array($result);
         $nombre =$row['nombre'];
+    
         
         
           

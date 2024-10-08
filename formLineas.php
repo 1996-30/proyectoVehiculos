@@ -1,6 +1,11 @@
 <?php 
 include("db.php");
 session_start();
+
+$marcas ="SELECT id_marca, nombre FROM marcas";
+$result = mysqli_query($conn, $marcas);
+
+
 ?>
 
 <?php 
@@ -27,7 +32,7 @@ include("header.php")
          }
          ?>
          <div class="car card-body">
-            <form action="GuardaMarca.php" method="POST">
+            <form action="GuardaLinea.php" method="POST">
                 <div class="form-group">
                     <h5>Registro Lineas de Vehiculos:</h5>
                 </div>
@@ -37,16 +42,16 @@ include("header.php")
                 </div>
                 <br>
                 <div>
-                <label for="cars" class="form-control">Seleccione Marca:</label><br>
-                    <select name="cars" id="cars" class="form-control">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="mercedes">Mercedes</option>
-                    <option value="audi">Audi</option>
+                <label for="Marcas" class="form-control">Seleccione Marca:</label><br>
+                    <select name="id_marca" id="marcas" class="form-control">
+                    <option value=""></option>
+                    <?php while($row = $result->fetch_assoc()){ ?>
+                        <option value="<?php echo $row['id_marca']; ?>"><?php echo $row['nombre']; ?></option>
+                    <?php } ?>
                     </select>
                 </div>
                 <br>
-                <input type="submit" class="btn btn-info btn-block" name="guardaMarca" value="Guardar">
+                <input type="submit" class="btn btn-info btn-block" name="guardaLinea" value="Guardar">
                  <input type="submit" class="btn btn-danger btn-block"  value="Cancelar"> 
             </form>
 
@@ -59,6 +64,7 @@ include("header.php")
                 <tr>
                 <th>Codigo</th> 
                 <th>Linea Vehiculos</th>
+                <th>Marca</th>
                 <th>Acciones</th>
 
                 </tr>
@@ -66,17 +72,21 @@ include("header.php")
                 <tbody>
                     <?php
 
-                        $query = "SELECT * FROM marcas";
+                        $query = "SELECT id_linea, linea.nombre as nombre, marca_id, marcas.nombre AS marca FROM linea 
+                        INNER JOIN marcas ON linea.marca_id=marcas.id_marca
+                        ORDER BY marca";
                         $result_task = mysqli_query($conn,$query);
 
                         while($row = mysqli_fetch_array($result_task))  {               ?>
                         <tr>
-                            <td><?php echo $row['id_marca']?></td>
+                            <td><?php echo $row['id_linea']?></td>
                             <td><?php echo $row['nombre']?></td>
+                            <td><?php echo $row['marca']?></td>
+                    
                             
                             <td>
-                                <a href="updateMarcas.php?id_marca=<?php echo $row['id_marca']; ?>" class="btn btn-success">Actualizar</a>
-                                <a href="deleteMarcas.php?id_marca=<?php echo $row['id_marca']; ?>" class="btn btn-danger">Eliminar</a>
+                                <a href="updateLineas.php?id_linea=<?php echo $row['id_linea']; ?>" class="btn btn-success">Actualizar</a>
+                                <a href="deleteLineas.php?id_linea=<?php echo $row['id_linea']; ?>" class="btn btn-danger">Eliminar</a>
                             </td>
 
                         </tr>
