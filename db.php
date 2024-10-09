@@ -1,9 +1,9 @@
 <?php
 
-$host = "localhost";
-$user = "root";
-$pass = "";
-$db = "renta_vehiculos";
+$host = "88.223.84.162";
+$user = "u244043183_renta_vehiculo";
+$pass = "Renta_Vehiculos2024";
+$db = "u244043183_renta_vehiculo";
 
 
 

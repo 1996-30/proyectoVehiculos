@@ -1,9 +1,9 @@
 <?php
 $conn = mysqli_connect(
-    'localhost',
-    'root',
-    '',
-    'renta_vehiculos'
+    '88.223.84.162',
+    'u244043183_renta_vehiculo',
+    'Renta_Vehiculos2024',
+    'u244043183_renta_vehiculo'
 );
 /*
 if ($conn) {
