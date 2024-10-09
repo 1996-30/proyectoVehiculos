@@ -1,5 +1,5 @@
 <?php
-include('bd.php');
+include('db.php');
 session_start();
 
 // Consulta para obtener los roles

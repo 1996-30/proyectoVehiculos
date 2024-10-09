@@ -27,16 +27,16 @@ include("header.php")
          }
          ?>
          <div class="car card-body">
-            <form action="GuardaMarca.php" method="POST">
+            <form action="GuardaModelo.php" method="POST">
                 <div class="form-group">
                     <h5>Registro Modelos de Vehiculos:</h5>
                 </div>
                 <br><!-- Este es un salto de linea -->
                 <div class="form-group">
-                    <input type="text" name="nombre"  class="form-control" placeholder="Ingrese Marca"></text>
+                    <input type="text" name="nombre"  class="form-control" placeholder="Ingrese Modelo Auto"></text>
                 </div>
                 <br>
-                <input type="submit" class="btn btn-info btn-block" name="guardaMarca" value="Guardar">
+                <input type="submit" class="btn btn-info btn-block" name="guardaModelo" value="Guardar">
                  <input type="submit" class="btn btn-danger btn-block"  value="Cancelar"> 
             </form>
 
@@ -48,7 +48,7 @@ include("header.php")
                 <thead>
                 <tr>
                 <th>Codigo</th> 
-                <th>Marca Vehiculos</th>
+                <th>Modelo Vehiculos</th>
                 <th>Acciones</th>
 
                 </tr>
@@ -56,17 +56,17 @@ include("header.php")
                 <tbody>
                     <?php
 
-                        $query = "SELECT * FROM marcas";
-                        $result_task = mysqli_query($conn,$query);
+                        $cSql = "SELECT * FROM modelo";
+                        $resultado = mysqli_query($conn,$cSql);
 
-                        while($row = mysqli_fetch_array($result_task))  {               ?>
+                        while($row = mysqli_fetch_array($resultado))  {               ?>
                         <tr>
-                            <td><?php echo $row['id_marca']?></td>
+                            <td><?php echo $row['id_modelo']?></td>
                             <td><?php echo $row['nombre']?></td>
                             
                             <td>
-                                <a href="updateMarcas.php?id_marca=<?php echo $row['id_marca']; ?>" class="btn btn-success">Actualizar</a>
-                                <a href="deleteMarcas.php?id_marca=<?php echo $row['id_marca']; ?>" class="btn btn-danger">Eliminar</a>
+                                <a href="updateModelos.php?id_modelo=<?php echo $row['id_modelo']; ?>" class="btn btn-success">Actualizar</a>
+                                <a href="deleteModelos.php?id_modelo=<?php echo $row['id_modelo']; ?>" class="btn btn-danger">Eliminar</a>
                             </td>
 
                         </tr>

@@ -3,7 +3,7 @@ $conn = mysqli_connect(
     'localhost',
     'root',
     '',
-    'reserva_vehiculo'
+    'renta_vehiculos'
 );
 /*
 if ($conn) {
