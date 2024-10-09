@@ -10,13 +10,11 @@
 <body>
     <nav class="navbar navbar-dark  bg-dark">
         <div class="container">
-              <a href="index.php " class=navbar-brand>Sistema de Reservas de Vehiculos </a>
+              <a href="index.php " class=navbar-brand>Sistema de Reservas de Automoviles </a>
         </div>
     </nav>
     
-    <?PHP
-        
-    ?>
+   <h1>Bienvenidos</h1>
    
 </body>
 </html>
