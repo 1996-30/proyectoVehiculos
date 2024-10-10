@@ -72,7 +72,7 @@ include("header.php")
                         <td><?= htmlspecialchars($row['rol_nombre']); ?></td>
                         <td>
                             <a href="update.php?id=<?= $row['id_usuario']; ?>" class="btn btn-warning">Actualizar</a>
-                            <a href="delete.php?id=<?= $row['id_usuario']; ?>" class="btn btn-danger">Eliminar</a>
+                            <a href="delete_user.php?id=<?= $row['id_usuario']; ?>" class="btn btn-danger">Eliminar</a>
                         </td>
                     </tr>
                 <?php 

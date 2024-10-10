@@ -1,0 +1,35 @@
+[33mcommit 9c6bd216d88a38c3f56f90d0aa79f550e6f5ebd6[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Heber Monzon <hebermonzon@hotmail.com>
+Date:   Wed Oct 9 07:26:05 2024 -0600
+
+    Crud Clientes y Vehiculos
+
+[33mcommit c835f0534af86cb1595c38416cfa4474c4b5c654[m
+Author: Heber Monzon <hebermonzon@hotmail.com>
+Date:   Tue Oct 8 23:33:35 2024 -0600
+
+    Conexion remota
+
+[33mcommit e6566b18f2d527b244e541ba4f11ef088744c618[m
+Author: Heber Monzon <hebermonzon@hotmail.com>
+Date:   Tue Oct 8 23:26:43 2024 -0600
+
+    CATALOGOS MODIFICACION
+
+[33mcommit 8b2036408dffc50d9391db89452491e0dcc2a3c6[m
+Author: rocae <ervinroca0909@gmail.com>
+Date:   Tue Oct 8 21:46:37 2024 -0500
+
+    Actualizacion crud login
+
+[33mcommit 5aaeaf8794e2d84ab4194866f2d7bc18b64877b7[m
+Author: Heber Monzon <hebermonzon@hotmail.com>
+Date:   Tue Oct 8 08:04:46 2024 -0600
+
+    Cambios catalogos vehiculos
+
+[33mcommit 48b1b5ce38c64521bbe70cf7c5eae01dd90731a4[m
+Author: Heber Monzon <hebermonzon@hotmail.com>
+Date:   Sun Oct 6 11:27:15 2024 -0600
+
+    Catalogos Reserva Vehiculos
