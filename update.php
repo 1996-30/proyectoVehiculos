@@ -50,7 +50,9 @@ if (isset($_POST['submit'])) {
     $stmt->close();
 }
 ?>
-
+<?php 
+include("header.php")
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -35,6 +35,9 @@ if (isset($_POST['submit'])) {
 }
 ?>
 
+<?php 
+include("header.php")
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,6 +50,7 @@ if (isset($_POST['submit'])) {
 <body>
     <div class="container mt-5">
         <h1>Agregar usuarios nuevos</h1>
+        
         <form action="create.php" method="POST">
             <div class="mb-3">
                 <label for="name">Nombre</label>

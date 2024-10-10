@@ -40,7 +40,9 @@ if (isset($_POST['submit'])) {
     }
 }
 ?>
-
+<?php 
+include("header.php")
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
